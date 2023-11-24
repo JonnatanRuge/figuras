@@ -1,0 +1,240 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@1,500&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Roboto', sans-serif;
+}
+
+body {
+    width: 100%;
+    min-width: 100hv;
+    background: url(../img/pexels-wallace-chuck-3602252.jpg); 
+    background-size: cover;
+    
+}
+
+section {
+    color: #ffff;
+    width: 80%;
+    margin: 100px auto;
+    border:  20px solid #ffff;
+    background: rgba(115, 131, 202, 0.625);
+    padding: 40px;
+    display: flex;
+    flex-wrap: wrap;
+}
+
+h2 {
+    color: #ffff;
+    font-size: 40px;
+    padding: 20px;
+}
+
+.left, .rigth {
+    width: 50%;
+    text-align: center;
+    border: 1px solid rgb(0, 0, 0);
+    padding: 15px;
+}
+
+button {
+    padding: 8px 30px;
+    background: #131313;
+    color: #ffff;
+    font-size: 25px;
+    border-radius: 0 20px 0 20px;
+    border: 1px solid #ffff;
+    transition: 0.5s;
+    margin: 10px;
+    cursor: pointer;
+    box-shadow: 0 0 20px 5px rgb(106, 93, 188);
+    
+}
+
+button:hover {
+    border-radius: 20px 0 20px 0;
+    color: black;
+    cursor: pointer;
+    background-color: rgb(255, 0, 0)
+}
+
+#figura {
+    width: 200px;
+    height: 200px;
+    background: #131313;
+    border: 2px solid rgb(0, 0, 0);
+    margin: 40px auto;
+    box-shadow: 0 0 20px 5px rgb(48, 47, 51);
+    transition: 1s;
+}
+
+#figura.Circulo {
+    border-radius: 100px;
+    background: #ffff;
+    border: 2px solid red;
+    transform: rotate(-360deg);
+}
+
+#figura.Rectangulo {
+    width: 500px;
+}
+
+#figura.Rombo {
+    rotate: 45deg;
+} 
+
+#figura.Imagen {
+    background-image: url(../img/perrito.jpg);
+    background-size: cover;
+} 
+
+#figura.Gif {
+    background: url(https://mir-s3-cdn-cf.behance.net/project_modules/hd/5eeea355389655.59822ff824b72.gif);
+    background-size: cover;
+}
+
+
+#figura.Triangulo {
+    height: 200px;
+    width: 200px;
+    border-right: 100px solid transparent;
+    border-top: 100px solid transparent;
+    border-left: 100px solid transparent;
+    border-bottom: 100px solid #da4df6;
+    background-color: transparent;
+    box-shadow: none;
+}
+
+#figura.Hoja {
+    border-radius: 0px 150px 0px 150px;
+    background-color: rgb(5, 134, 5);
+    box-shadow: none;
+    border: 2px solid rgb(33, 240, 33);
+}
+
+#figura.Pac {
+    background-color: transparent;
+    border: solid yellowgreen 50px;
+    border-radius: 50%;
+    width: 100px;
+    height: 100px;
+    margin: auto;
+    box-sizing: border-box;
+    border-color: yellowgreen transparent yellowgreen yellowgreen;
+}  
+
+#figura.Luna {
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+    box-shadow: 30px 10px 0 #a84a47;
+    background-color: transparent;
+    border: none;
+}
+
+
+#figura.Huevo {
+    width: 126px;
+    height: 180px;
+    background-color: #ffff;
+    border-radius: 50% 50% 50% 50% / 60% 60% 40% 40%;
+    
+}
+
+#figura.Trapecio {
+    width: 250px;
+    height: 0px;
+    border-right: 60px solid transparent;
+    border-left: 60px solid transparent;
+    border-bottom: 100px solid #c7ca42;
+    background-color: transparent;
+    box-shadow: none;
+} 
+
+#figura.moveTop {
+    transform: translateY(-100px);
+}
+
+#figura.moveleft {
+    transform: translate(-100px);
+}
+
+#figura.movebottom {
+    transform: translateY(100px);
+}
+
+#figura.moveRigth {
+    transform: translate(100px);
+}
+
+#body.CambiarImagen {
+    background-image: url(https://i.pinimg.com/originals/40/5b/01/405b01dca75926d68e9cfaac5f7c4e50.jpg);
+    background-size: cover;
+}
+
+
+/* #figura.PanelSuperior {
+
+} */
+
+#figura.CambiarColor {
+    background-color: rgb(4, 4, 242);
+} 
+
+/* Panel lateral */
+
+.panel-lateral {
+    position: absolute;
+    z-index: 9;
+    top: 0;
+    left: -400px;
+    width: 400px;
+    background: rgb(0, 0, 0);
+    text-align: center;
+    padding: 60px 30px;
+    height: 100vh;
+    transition: 1s;
+}
+
+.panel-lateral.active {
+    left: 0;
+}
+
+.panel-lateral h2 {
+    color: rgb(255, 255, 255);
+    
+}
+
+.panel-lateral a {
+    background-color: #131313;
+    color: aqua;
+    padding: 8px 20px;
+    display: block;
+    text-align: center;
+    margin: 15px 0;
+    text-decoration: none;
+    transition: .6s;
+}
+
+.panel-lateral a:hover {
+    transform: scale(1.07);
+}
+
+.panel-lateral a.close {
+    position: absolute;
+    right: 20px;
+    top: 20px;
+    background: transparent;
+    color: rgb(255, 255, 255);
+    font-size: 22px;
+}
+
+#figura.Diamante {
+    width: 100px;
+    height: 100px;
+    background-color: rgba(255, 217, 0, 0.893);
+    transform: rotate(45deg);
+    transform-origin: 50% 50%;
+}
